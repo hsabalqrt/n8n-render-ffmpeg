@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: n8n-with-ffmpeg
+    env: docker
+    plan: starter
+    repo: https://github.com/hsabalqrt/n8n-render-ffmpeg
+    dockerfilePath: ./Dockerfile
+    buildCommand: npm install
+    startCommand: n8n
+    envVars:
+      - key: GENERIC_TIMEZONE
+        value: Asia/Riyadh
+      - key: N8N_BASIC_AUTH_ACTIVE
+        value: "true"
+      - key: N8N_BASIC_AUTH_USER
+        value: Alqart
+      - key: N8N_BASIC_AUTH_PASSWORD
+        value: GLA3sdFRgRpADc8
