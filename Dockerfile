@@ -2,7 +2,7 @@ FROM n8nio/n8n
 
 USER root
 
-# تثبيت ffmpeg
-RUN apt update && apt install -y ffmpeg
+# تثبيت ffmpeg باستخدام apk (لأن الصورة مبنية على Alpine)
+RUN apk update && apk add ffmpeg
 
 USER node
